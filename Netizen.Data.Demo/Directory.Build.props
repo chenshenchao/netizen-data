@@ -1,0 +1,6 @@
+﻿<Project>
+  <PropertyGroup>
+    <BaseIntermediateOutputPath>Targets/Objects</BaseIntermediateOutputPath>
+    <MSBuildProjectExtensionsPath>Targets/Objects</MSBuildProjectExtensionsPath>
+  </PropertyGroup>
+</Project>

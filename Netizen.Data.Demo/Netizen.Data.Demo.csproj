@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+  	<OutputPath>Targets/Binaries/Debug</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+  	<OutputPath>Targets/Binaries/Release</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+  	<Compile Remove="Targets\**" />
+  	<EmbeddedResource Remove="Targets\**" />
+  	<None Remove="Targets\**" />
+  </ItemGroup>
+</Project>

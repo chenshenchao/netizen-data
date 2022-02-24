@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net5.0;net6.0</TargetFrameworks>
+    <IsPackable>true</IsPackable>
+    <PackageId>Netizen.Data</PackageId>
+    <Version>0.0.1</Version>
+    <Authors>chenshenchao</Authors>
+    <PackageLicenseFile>License</PackageLicenseFile>
+    <PackageReadmeFile>Readme.md</PackageReadmeFile>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+  	<OutputPath>Targets/Binaries/Debug</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+  	<OutputPath>Targets/Binaries/Release</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+  	<Compile Remove="Targets\**" />
+  	<EmbeddedResource Remove="Targets\**" />
+  	<None Remove="Targets\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+  	<None Include="../License" Pack="true" PackagePath="/" />
+  	<None Include="../Readme.md" Pack="true" PackagePath="/" />
+  </ItemGroup>
+</Project>
